@@ -1,0 +1,10 @@
+spring:
+  rabbitmq:
+    host: 124.71.114.210
+    port: 5672
+    username: admin
+    password: admin
+    # NONE: 禁用发布确认模式，是默认值
+    # CORRELATED: 发布消息成功到交换器后会触发回调方法
+    # SIMPLE: 经测试有两种效果 1. 和CORRELATED值一样会触发回调方法 2. 在发布消息成功后使用 rabbitTemplate调用waitForConfirms或waitForConfirmsOrDie方法等待broker点返回发送结果，根据返回结果来判定下一步的逻辑
+#    publisher-confirm-type: correlated
